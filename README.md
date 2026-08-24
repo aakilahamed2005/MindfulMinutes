@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mindful Web Time
 
 A private, local-first Chrome extension for setting daily website limits and reviewing weekly screen-time progress.
@@ -32,3 +33,7 @@ npm test
 ```
 
 Usage is saved for 90 days. The tracker commits active-tab time every 30 seconds and when the active tab, window focus, or idle state changes.
+=======
+# MindfulMinutes
+A privacy-first Chrome extension that tracks website usage, sets custom weekday and weekend time limits, blocks distracting sites when time runs out, and visualizes weekly screen-time reduction.
+>>>>>>> 60d3f199171d55ffdbfa56a786433ef4d522827a
