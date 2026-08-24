@@ -1,0 +1,13 @@
+body { min-height: 100vh; display: grid; place-items: center; overflow: hidden; }
+.blocked-shell { position: relative; z-index: 1; display: grid; justify-items: center; width: min(680px, calc(100% - 40px)); padding: 46px 38px; text-align: center; }
+.blocked-toggle { position: fixed; top: 24px; right: 24px; }
+.blocked-shell .celestial { --orb-size: 88px; margin-bottom: 20px; }
+.blocked-shell h1 { max-width: 650px; font-size: clamp(44px, 7vw, 76px); }
+.message { max-width: 550px; margin: 0 auto 27px; color: var(--muted); font-size: 16px; line-height: 1.7; }
+.message strong { color: var(--ink); }
+.reset-card { display: inline-flex; align-items: center; gap: 18px; padding: 13px 20px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); backdrop-filter: blur(16px); }
+.reset-card span { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.reset-card strong { font-size: 15px; font-variant-numeric: tabular-nums; letter-spacing: .05em; }
+.actions { display: flex; justify-content: center; gap: 9px; margin-top: 27px; }
+.closing { margin-top: 28px; color: var(--muted); font-size: 12px; font-style: normal; letter-spacing: .03em; }
+@media (max-width: 480px) { .blocked-shell { padding: 30px 10px; } .actions { width: 100%; flex-direction: column; } .actions .btn { width: 100%; } }

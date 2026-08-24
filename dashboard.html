@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Web Time — Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top"><span class="brand-mark">M</span> Mindful Web Time</a>
+      <div class="topbar-actions">
+        <span class="local-badge"><span></span> Data stored locally</span>
+        <button class="sky-toggle" type="button" aria-label="Switch color mode"><span class="toggle-sun">☀</span><span class="toggle-moon">☾</span></button>
+      </div>
+    </header>
+
+    <main id="top" class="dashboard-shell">
+      <section class="hero-grid">
+        <div class="hero-copy-wrap">
+          <p class="eyebrow">Digital wellbeing · made simple</p>
+          <h1>Less scrolling.<br><span>More living.</span></h1>
+          <p class="subtle hero-copy">Set clear boundaries for distracting websites. We quietly keep the time, so you can keep your attention.</p>
+          <a class="hero-link" href="#limits">Set a new limit <span>→</span></a>
+        </div>
+        <div class="sky-stage" aria-hidden="true">
+          <span class="stage-label stage-label-top">FOCUS / 01</span>
+          <div class="celestial"><div class="celestial-core"></div><span class="orbit-dot"></span></div>
+          <span class="stage-label stage-label-bottom">YOUR TIME, YOUR RULES</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Weekly summary">
+        <article class="stat-card card interactive-card"><span>01 · This week</span><strong id="currentWeek">0 min</strong><small>across limited sites</small></article>
+        <article class="stat-card card accent interactive-card"><span>02 · Time reclaimed</span><strong id="timeSaved">0 min</strong><small id="reductionLabel">compared with last week</small></article>
+        <article class="stat-card card interactive-card"><span>03 · Daily goals met</span><strong id="goalsMet">0 / 0</strong><small>days within every limit</small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="chart-card card interactive-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">Overview</p><h2>This week’s screen time</h2></div>
+            <div class="legend"><span></span> Limited websites</div>
+          </div>
+          <div id="weeklyChart" class="weekly-chart" aria-label="Daily screen time chart"></div>
+        </article>
+
+        <article class="add-card card interactive-card">
+          <p class="eyebrow">Create a boundary</p>
+          <h2>Add a website limit</h2>
+          <p class="subtle">Enter a domain such as instagram.com. Its subdomains will be included.</p>
+          <form id="limitForm" novalidate>
+            <label>Website
+              <input id="website" name="website" type="text" inputmode="url" placeholder="instagram.com" autocomplete="off" required>
+            </label>
+            <div class="field-pair">
+              <label>Weekdays
+                <span class="input-suffix"><input id="weekdayMinutes" name="weekdayMinutes" type="number" min="1" max="1440" value="45" required><span>min</span></span>
+              </label>
+              <label>Weekends
+                <span class="input-suffix"><input id="weekendMinutes" name="weekendMinutes" type="number" min="1" max="1440" value="15" required><span>min</span></span>
+              </label>
+            </div>
+            <p id="formError" class="form-error" role="alert"></p>
+            <div class="form-actions">
+              <button id="formSubmit" class="btn" type="submit">Add website limit</button>
+              <button id="cancelEdit" class="btn secondary" type="button" hidden>Cancel</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section id="limits" class="limits-section">
+        <div class="section-title"><div><p class="eyebrow">Your boundaries</p><h2>Website limits</h2></div><span id="ruleCount" class="count-pill">0 websites</span></div>
+        <div id="rulesList" class="rules-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>Mindful Web Time · Private by design · All tracking stays in this browser</footer>
+    <script type="module" src="dashboard.js"></script>
+  </body>
+</html>

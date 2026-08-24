@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Mindful Web Time",
+  "version": "1.0.0",
+  "description": "Set daily website limits, block distractions when time is up, and celebrate weekly screen-time reductions.",
+  "permissions": ["storage", "tabs", "alarms", "idle"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Mindful Web Time",
+    "default_popup": "popup.html"
+  },
+  "options_page": "dashboard.html"
+}

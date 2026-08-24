@@ -1,0 +1,34 @@
+body { width: 410px; min-height: 570px; overflow-x: hidden; }
+.popup-shell { padding: 22px; }
+.popup-header { display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 12px; }
+.popup-header h1 { margin: 0; font-size: 27px; letter-spacing: -.055em; }
+.popup-header .eyebrow { margin-bottom: 2px; font-size: 9px; }
+.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--ink); color: var(--paper); font-weight: 900; }
+.header-actions { display: flex; align-items: center; gap: 7px; }
+.header-actions .sky-toggle { width: 52px; height: 30px; }
+.header-actions .sky-toggle span { width: 22px; height: 22px; font-size: 11px; }
+.icon-button { width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; background: var(--card); color: var(--ink); font-size: 17px; backdrop-filter: blur(12px); }
+.icon-button:hover { border-color: var(--green); }
+
+.today-card { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 145px; margin: 23px 0; padding: 21px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 25px; background: #151715; color: white; box-shadow: 0 20px 50px rgba(20, 28, 24, .18); }
+.card-label { margin-bottom: 7px; color: #aeb9b3; font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
+.big-number { position: relative; z-index: 1; font-size: 32px; letter-spacing: -.055em; }
+.streak-pill { position: absolute; left: 20px; bottom: 16px; padding: 6px 9px; border-radius: 999px; background: rgba(255,255,255,.08); color: #bdedd7; font-size: 10px; font-weight: 800; }
+.mini-sky { position: absolute; right: -8px; top: -14px; width: 145px; height: 145px; opacity: .92; }
+.mini-sky .celestial { --orb-size: 58px; width: 145px; height: 145px; }
+.mini-sky .orbit-dot { background: #79dcb6; }
+
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
+.section-heading h2 { margin: 0; font-size: 17px; }
+.day-label { color: var(--muted); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.site-list { display: grid; gap: 9px; max-height: 265px; overflow-y: auto; scrollbar-width: thin; }
+.site-item { padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); backdrop-filter: blur(12px); }
+.site-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.site-name { overflow: hidden; font-size: 13px; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
+.site-time { flex: none; color: var(--muted); font-size: 10px; }
+.site-time strong { color: var(--ink); }
+.paused { opacity: .48; }
+.manage-button { width: 100%; margin-top: 18px; }
+.privacy-note { display: flex; justify-content: center; align-items: center; gap: 7px; margin: 12px 0 0; color: var(--muted); font-size: 10px; }
+.privacy-note span { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+.empty-state { font-size: 12px; }

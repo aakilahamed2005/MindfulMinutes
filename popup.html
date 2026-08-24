@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Web Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div class="brand-mark" aria-hidden="true">M</div>
+        <div>
+          <p class="eyebrow">Mindful Web Time</p>
+          <h1>Today</h1>
+        </div>
+        <div class="header-actions">
+          <button class="sky-toggle" type="button" aria-label="Switch color mode"><span class="toggle-sun">☀</span><span class="toggle-moon">☾</span></button>
+          <button id="openDashboard" class="icon-button" title="Open dashboard" aria-label="Open dashboard">↗</button>
+        </div>
+      </header>
+
+      <section id="hero" class="today-card interactive-card">
+        <div>
+          <p class="card-label">Tracked today</p>
+          <strong id="totalToday" class="big-number">0 min</strong>
+        </div>
+        <div class="mini-sky" aria-hidden="true"><div class="celestial"><div class="celestial-core"></div><span class="orbit-dot"></span></div></div>
+        <div class="streak-pill"><span aria-hidden="true">✓</span> <span id="onTrackCount">0 on track</span></div>
+      </section>
+
+      <section class="sites-section" aria-labelledby="sitesTitle">
+        <div class="section-heading">
+          <h2 id="sitesTitle">Your limits</h2>
+          <span id="dayType" class="day-label">Weekday</span>
+        </div>
+        <div id="siteList" class="site-list" aria-live="polite"></div>
+      </section>
+
+      <button id="manageLimits" class="btn manage-button">Manage limits &amp; view progress</button>
+      <p class="privacy-note"><span></span> Your browsing-time data stays on this device.</p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

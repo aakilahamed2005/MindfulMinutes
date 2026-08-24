@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today’s limit reached</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blocked.css">
+  </head>
+  <body>
+    <main class="blocked-shell">
+      <button class="sky-toggle blocked-toggle" type="button" aria-label="Switch color mode"><span class="toggle-sun">☀</span><span class="toggle-moon">☾</span></button>
+      <div class="celestial" aria-hidden="true"><div class="celestial-core"></div><span class="orbit-dot"></span></div>
+      <p class="eyebrow">Daily boundary reached</p>
+      <h1>That’s enough for today.</h1>
+      <p class="message">You’ve used your <strong id="limit">daily</strong> limit for <strong id="site">this website</strong>. It will be available again tomorrow.</p>
+      <div class="reset-card interactive-card">
+        <span>Time until reset</span>
+        <strong id="countdown">—</strong>
+      </div>
+      <div class="actions">
+        <button id="goBack" class="btn">Leave this site</button>
+        <button id="viewProgress" class="btn secondary">View my progress</button>
+      </div>
+      <p class="closing">Take a breath. Stretch. Do something that feels good offline.</p>
+    </main>
+    <script type="module" src="blocked.js"></script>
+  </body>
+</html>
